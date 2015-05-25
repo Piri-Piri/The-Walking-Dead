@@ -5,8 +5,8 @@ public class LevelManager : MonoBehaviour {
 	public float autoLoadNextLevelAfter;
 
 	void Start () {
-		if (autoLoadNextLevelAfter == 0) {
-			//Debug.Log ("Level auto load is disabled for level: " + Application.loadedLevel);
+		if (autoLoadNextLevelAfter <= 0) {
+			Debug.Log ("Level auto load is disabled for level: " + Application.loadedLevel);
 		} else {
 			Invoke ("LoadNextLevel", autoLoadNextLevelAfter);
 		}
